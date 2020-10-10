@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Model : MonoBehaviour {
+    int currentStage = 0;
     public GameObject knife;
     public Vector3 knifePosition;
-    public float totalAmountKnifes;
+    public float totalAmountKnives;
 
     Knife currentKnife;
+
+    public StageManager stageManager;
     // Start is called before the first frame update
     void Start() {
+        stageManager.ReadStage(0);
+        totalAmountKnives = stageManager.knivesAmount;
         CreateKnife();
-    }
-
-    // Update is called once per frame
-    void Update() {
     }
 
     public void CreateKnife() {
@@ -24,12 +25,15 @@ public class Model : MonoBehaviour {
 
     public void OnKnifeHitObject(bool target) {
         currentKnife.HitObject -= OnKnifeHitObject;
-        totalAmountKnifes--;
+        totalAmountKnives--;
         if (target) {
-            if (totalAmountKnifes > 0) {
+            if (totalAmountKnives > 0) {
                 CreateKnife();
             } else {
-                Debug.Log("You win");
+                currentStage++;
+                stageManager.ReadStage(currentStage);
+                totalAmountKnives = stageManager.knivesAmount;
+                CreateKnife();
             }
         } else {
             Debug.Log("Game Over");

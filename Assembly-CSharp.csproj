@@ -64,6 +64,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Knife.cs" />
     <Compile Include="Assets\Scripts\Model.cs" />
+    <Compile Include="Assets\Scripts\Stage.cs" />
+    <Compile Include="Assets\Scripts\StageManager.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\TargetsBehaviours\TargetDecelerate.cs" />
     <Compile Include="Assets\Scripts\TargetsBehaviours\TargetInverse.cs" />

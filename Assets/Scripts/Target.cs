@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour {
     public float maxRotateVelocity;
-   [SerializeField] protected float currentVelocity;
+   protected float currentVelocity;
 
     // Start is called before the first frame update
     protected void Start() {
