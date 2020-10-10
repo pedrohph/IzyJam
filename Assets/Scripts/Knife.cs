@@ -9,6 +9,7 @@ public class Knife : MonoBehaviour {
 
     [SerializeField] float speedForce = 10;
     Rigidbody2D rBody;
+    bool hitSomething = false;
     // Start is called before the first frame update
     void Start() {
         rBody = gameObject.GetComponent<Rigidbody2D>();
@@ -30,14 +31,19 @@ public class Knife : MonoBehaviour {
         if (HitObject != null) {
             HitObject(collision.gameObject.GetComponent<Target>() != null);
         }
-
-        if (collision.gameObject.GetComponent<Target>()) {
-            gameObject.transform.parent = collision.transform;
-            rBody.isKinematic = true;
-            transform.Translate(0, 0.5f, 0);
-            Destroy(this);
-        } else{
-            Destroy(gameObject);
+        if (!hitSomething) {
+            hitSomething = true;
+            if (collision.gameObject.GetComponent<Target>()) {
+                gameObject.GetComponent<Collider2D>().enabled = true;
+                gameObject.transform.parent = collision.transform;
+                rBody.isKinematic = true;
+                transform.Translate(0, 0.5f, 0);
+            } else {
+                gameObject.GetComponent<Collider2D>().enabled = false;
+                rBody.AddForce(Vector2.one * -1 * speedForce / 2);
+                Destroy(gameObject, 2);
+            }
         }
+        Destroy(this);
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d92116863114e64693dd348c3127c12, type: 3}
   m_Name: Stage3
   m_EditorClassIdentifier: 
-  target: {fileID: 957262648752400007, guid: 59dd14c3898fd1b4abcbd28e7b70a0b1, type: 3}
+  target: {fileID: 286128608236062486, guid: d49ad0cd31aa5ac43a29cacb9b481160, type: 3}
   AmountKnives: 8
   targetType: 1
   targetVelocity: 250

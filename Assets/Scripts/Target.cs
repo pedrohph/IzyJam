@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Target : MonoBehaviour {
     public float maxRotateVelocity;
-   protected float currentVelocity;
+    protected float currentVelocity;
 
     // Start is called before the first frame update
-    protected void Start() {
+    void Start() {
+        if (Random.Range(0, 10) % 2 == 0) {
+            maxRotateVelocity *= -1;
+        }
+
         currentVelocity = maxRotateVelocity;
     }
 
