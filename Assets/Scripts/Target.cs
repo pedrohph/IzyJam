@@ -16,7 +16,7 @@ public class Target : MonoBehaviour {
         Rotate();
     }
 
-    public void Rotate() {
+    protected void Rotate() {
         transform.Rotate(0, 0, currentVelocity * Time.deltaTime);
     }
 }

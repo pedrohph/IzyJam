@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 5109872847299131744, guid: 4d33c00366297754c90dc7bc429caa66, type: 3}
   AmountKnives: 9
-  targetKind: 0
-  targetVelocity: 200
+  targetType: 0
+  targetVelocity: 150
   decreaseSpeed: 0

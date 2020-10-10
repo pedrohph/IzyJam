@@ -5,20 +5,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HudGameOver : MonoBehaviour {
-    public Text textScore;
-    public Text textStage;
-    private void OnEnable() {
-        //Mudar o score
-        textScore.text = "" + 0;
-        //Mudar o estagio
-        textStage.text = "STAGE " + 0;
-    }
-
+    [SerializeField] Text textScore = null;
+    [SerializeField] Text textStage = null;
+    
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Home() {
         //Go to main menu
+    }
+
+    public void GameOverValues(int stage, int score) {
+        stage++;
+        textScore.text = "" + score;
+        textStage.text = "STAGE " + stage;
     }
 }
