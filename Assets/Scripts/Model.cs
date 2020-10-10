@@ -6,11 +6,13 @@ public class Model : MonoBehaviour {
     int currentStage = 0;
     public GameObject knife;
     public Vector3 knifePosition;
-    public float totalAmountKnives;
 
+    float totalAmountKnives;
     Knife currentKnife;
 
     public StageManager stageManager;
+
+    public GameObject gameOverPanel;
     // Start is called before the first frame update
     void Start() {
         stageManager.ReadStage(0);
@@ -36,7 +38,11 @@ public class Model : MonoBehaviour {
                 CreateKnife();
             }
         } else {
-            Debug.Log("Game Over");
+            Invoke("OpenGameOverPanel", 0.5f);
         }
+    }
+
+    public void OpenGameOverPanel() {
+        gameOverPanel.SetActive(true);
     }
 }
