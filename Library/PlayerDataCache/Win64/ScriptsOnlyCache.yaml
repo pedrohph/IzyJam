@@ -193,6 +193,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
@@ -470,7 +474,7 @@ ScriptsOnlyBuild:
     className: TargetInverse
   - hash:
       serializedVersion: 2
-      Hash: d848a7c2f226f3776525b88ca29eca95
+      Hash: 5f89945811de78b8d191253ef5499043
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Model
@@ -482,7 +486,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 3da1227ef8da140e7f9ff111ccdbc22f
+      Hash: 2df1d423e90030e26947d48bfac86080
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HudGame
