@@ -17,3 +17,4 @@ MonoBehaviour:
   targetType: 0
   targetVelocity: 180
   decreaseSpeed: 0
+  appleAmount: 1

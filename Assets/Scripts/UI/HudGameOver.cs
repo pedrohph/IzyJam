@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class HudGameOver : MonoBehaviour {
     [SerializeField] Text textScore = null;
     [SerializeField] Text textStage = null;
+    [SerializeField] Text textApple = null;
 
     public GameObject settingsPanel;
 
@@ -22,14 +23,13 @@ public class HudGameOver : MonoBehaviour {
         stage++;
         textScore.text = "" + score;
         textStage.text = "STAGE " + stage;
+        textApple.text = "x " + PlayerPrefs.GetInt("AppleCoin", 0);
 
-        
-        
-        if(PlayerPrefs.GetInt("HighScore", -1) < score) {
+        if (PlayerPrefs.GetInt("HighScore", -1) < score) {
             PlayerPrefs.SetInt("HighScore", score);
         }
 
-        if(PlayerPrefs.GetInt("HighStage", -1) < stage) {
+        if (PlayerPrefs.GetInt("HighStage", -1) < stage) {
             PlayerPrefs.SetInt("HighStage", stage);
         }
     }

@@ -34,10 +34,9 @@ public class Knife : MonoBehaviour {
         if (!hitSomething) {
             hitSomething = true;
             if (collision.gameObject.GetComponent<Target>()) {
-                gameObject.GetComponent<Collider2D>().enabled = true;
-                gameObject.transform.parent = collision.transform;
                 rBody.isKinematic = true;
-                transform.Translate(0, 0.5f, 0);
+                gameObject.transform.parent = collision.transform;
+                transform.Translate(0, 0.75f, 0);
             } else {
                 gameObject.GetComponent<Collider2D>().enabled = false;
                 rBody.AddForce(Vector2.one * -1 * speedForce / 2);

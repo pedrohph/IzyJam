@@ -8,16 +8,6 @@ public class HudGame : MonoBehaviour {
     [SerializeField] Text textStage = null;
     [SerializeField] List<Image> knives = new List<Image>();
 
-    // Start is called before the first frame update
-    void Start() {
-
-    }
-
-    // Update is called once per frame
-    void Update() {
-
-    }
-
     public void NextStage(int stage, int knivesAmount) {
         stage++;
         textStage.text = "STAGE" + stage;
@@ -44,8 +34,8 @@ public class HudGame : MonoBehaviour {
         int value = totalKnives - knives.Count;
         Vector3 position = new Vector3(knives[0].transform.position.x, knives[knives.Count - 1].transform.position.y, 0);
         for (int i = 0; i<value; i++) {
-            position.y += 32;
-            knives.Add(Instantiate(knives[0],position, transform.rotation, knives[0].transform.parent));
+            position.y += 16 ;
+            knives.Add(Instantiate(knives[0],position, knives[0].transform.rotation, knives[0].transform.parent));
         }
     }
 
