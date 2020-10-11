@@ -6,23 +6,22 @@ public class Target : MonoBehaviour {
     public float maxRotateVelocity;
     protected float currentVelocity;
 
-
     public int amountApples;
     public int amountKnives;
     public GameObject apple;
-    GameObject knife;
 
+    GameObject knife;
     GameObject particle;
 
     // Start is called before the first frame update
     void Start() {
         particle = transform.GetChild(transform.childCount - 1).gameObject;
 
-        knife = transform.GetChild(1).gameObject;
-        knife.SetActive(false);
-        if(amountKnives != 0) {
+        if (amountKnives != 0) {
+            knife = transform.GetChild(1).gameObject;
             GenerateKnives();
         }
+
 
         if (amountApples != 0) {
             GenerateApples();

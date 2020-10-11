@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7303848331470738730}
   - component: {fileID: 7303848331470738731}
   - component: {fileID: 7303848331470738727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7303848331797735234}
   - component: {fileID: 7303848331797735233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple_coin_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

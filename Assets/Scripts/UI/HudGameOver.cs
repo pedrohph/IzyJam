@@ -7,16 +7,17 @@ using UnityEngine.UI;
 public class HudGameOver : MonoBehaviour {
     public delegate void Continued();
     public event Continued ContinuedGame;
-
-
+    
+    [Header("Components")]
     [SerializeField] Text textScore = null;
     [SerializeField] Text textStage = null;
     [SerializeField] Text textApple = null;
-
     [SerializeField] Button buttonContinue = null;
 
+    [Header("Panels")]
     public GameObject settingsPanel;
     public GameObject storePanel;
+
     bool usedContinue = false;
 
     public void Restart() {

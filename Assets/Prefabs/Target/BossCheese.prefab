@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 286128608236062568}
   - component: {fileID: 286128608236062487}
   - component: {fileID: 3036188308862746372}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossCheese
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,10 +33,10 @@ Transform:
   - {fileID: 8955032439456380710}
   - {fileID: 2861314056699460219}
   - {fileID: 2861314058321231025}
-  - {fileID: 2721271932934136453}
   - {fileID: 6876460974427572821}
   - {fileID: 8796197930289956783}
   - {fileID: 8439774244608706825}
+  - {fileID: 2721271932934136453}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 2861314056699460219}
   - component: {fileID: 2861314056699460217}
   - component: {fileID: 2861314056699460218}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Knife (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 2861314058321231025}
   - component: {fileID: 2861314058321230991}
   - component: {fileID: 2861314058321231024}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Knife (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6876460974083225663}
   - component: {fileID: 6876460974083225660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple_coin_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 6876460974427572823}
   - component: {fileID: 6876460974427572822}
   - component: {fileID: 6876460974427572826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ Transform:
   m_Children:
   - {fileID: 6876460974083225663}
   m_Father: {fileID: 286128608236062569}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &6876460974427572820
 SpriteRenderer:
@@ -573,7 +573,7 @@ GameObject:
   - component: {fileID: 2721271932934136453}
   - component: {fileID: 3363270860362396905}
   - component: {fileID: 691474318001292294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 286128608236062569}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &3363270860362396905
 ParticleSystem:
@@ -5329,7 +5329,7 @@ GameObject:
   - component: {fileID: 8439774244608706827}
   - component: {fileID: 8439774244608706826}
   - component: {fileID: 8439774244608706822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5349,7 +5349,7 @@ Transform:
   m_Children:
   - {fileID: 8439774244952488803}
   m_Father: {fileID: 286128608236062569}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -215}
 --- !u!212 &8439774244608706824
 SpriteRenderer:
@@ -5463,7 +5463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8439774244952488803}
   - component: {fileID: 8439774244952488800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple_coin_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5545,7 +5545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8796197930080089541}
   - component: {fileID: 8796197930080089542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple_coin_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5630,7 +5630,7 @@ GameObject:
   - component: {fileID: 8796197930289956781}
   - component: {fileID: 8796197930289956780}
   - component: {fileID: 8796197930289956768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Apple (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5650,7 +5650,7 @@ Transform:
   m_Children:
   - {fileID: 8796197930080089541}
   m_Father: {fileID: 286128608236062569}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 215}
 --- !u!212 &8796197930289956782
 SpriteRenderer:
@@ -5765,7 +5765,7 @@ GameObject:
   - component: {fileID: 8955032439456380710}
   - component: {fileID: 8955032439456380709}
   - component: {fileID: 8955032439456380715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}

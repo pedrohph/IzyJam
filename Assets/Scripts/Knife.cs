@@ -6,7 +6,6 @@ public class Knife : MonoBehaviour {
     public delegate void KnifeHitObject(bool isTarget);
     public event KnifeHitObject HitObject;
 
-
     [SerializeField] float speedForce = 10;
     Rigidbody2D rBody;
     bool hitSomething = false;
@@ -34,6 +33,7 @@ public class Knife : MonoBehaviour {
             HitObject(collision.gameObject.GetComponent<Target>() != null);
         }
         if (!hitSomething) {
+            gameObject.layer = LayerMask.NameToLayer("Target");
             hitSomething = true;
             if (collision.gameObject.GetComponent<Target>()) {
                 rBody.isKinematic = true;

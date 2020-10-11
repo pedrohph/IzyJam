@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
+    [Header("Components")]
     public Text hScoreText;
     public Text hStageText;
     public Text appleText;
 
+    [Header("Panels")]
     public GameObject settingsPanel;
     public GameObject storePanel;
 

@@ -7,18 +7,18 @@ public class SkinShop : MonoBehaviour {
     public delegate void BoughtSkin();
     public event BoughtSkin SkinBought;
 
+    [Header("Components")]
     public Text textApples;
-
     public Image currentKnife;
     public GameObject buttonBuy;
+    public Transform slots;
+
     string unlockedKnives;
     int currentSelected;
     int coins;
 
     KnifeSkin skins;
-
-    public Transform slots;
-
+    
     void OnEnable() {
 
         skins = Resources.Load<KnifeSkin>("KnifeSkins");
