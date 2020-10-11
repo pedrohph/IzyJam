@@ -7,12 +7,26 @@ public class HudGame : MonoBehaviour {
     [SerializeField] Text textScore = null;
     [SerializeField] Text textStage = null;
     [SerializeField] List<Image> knives = new List<Image>();
+    [SerializeField] Image[] stageMark = new Image[8];
+
 
     public void NextStage(int stage, int knivesAmount) {
+
+        for (int i = 0; i < 5; i++) {
+            if (i < stage % 5) {
+                stageMark[i].color = Color.blue;
+            } else if (i == stage % 5) {
+                stageMark[i].color = Color.gray;
+            } else {
+                stageMark[i].color = Color.white;
+            }
+        }
+
         stage++;
         textStage.text = "STAGE " + stage;
 
         if (stage % 5 == 0) {
+            stageMark[4].color = Color.red;
             stage = stage / 5;
             textStage.text = "BOSS: " + stage;
         }
@@ -39,9 +53,9 @@ public class HudGame : MonoBehaviour {
     private void AddKnives(int totalKnives) {
         int value = totalKnives - knives.Count;
         Vector3 position = new Vector3(knives[0].transform.position.x, knives[knives.Count - 1].transform.position.y, 0);
-        for (int i = 0; i<value; i++) {
-            position.y += 16 ;
-            knives.Add(Instantiate(knives[0],position, knives[0].transform.rotation, knives[0].transform.parent));
+        for (int i = 0; i < value; i++) {
+            position.y += 16;
+            knives.Add(Instantiate(knives[0], position, knives[0].transform.rotation, knives[0].transform.parent));
         }
     }
 
@@ -50,7 +64,7 @@ public class HudGame : MonoBehaviour {
     }
 
     private void FillKnives() {
-        for(int i = 0; i<knives.Count; i++) {
+        for (int i = 0; i < knives.Count; i++) {
             knives[i].color = Color.white;
         }
     }

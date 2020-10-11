@@ -15,7 +15,7 @@ MonoBehaviour:
   target: {fileID: 957262648752400007, guid: 59dd14c3898fd1b4abcbd28e7b70a0b1, type: 3}
   AmountKnives: 8
   targetType: 2
-  targetVelocity: 190
+  targetVelocity: 274
   decreaseSpeed: 100
   appleAmount: 2
   knivesOnTarget: 3

@@ -58,6 +58,8 @@ public class HudGameOver : MonoBehaviour {
                 buttonContinue.interactable = true;
             }
         }
+
+        settingsPanel.GetComponent<Settings>().ResetedData += OnResetedData;
         storePanel.GetComponent<SkinShop>().SkinBought += OnSkinBought;
     }
 
@@ -85,4 +87,9 @@ public class HudGameOver : MonoBehaviour {
         int coins = PlayerPrefs.GetInt("AppleCoin", 0);
         textApple.text = "x " + coins;
     }
+
+    public void OnResetedData() {
+        textApple.text = "x 0";
+    }
+
 }

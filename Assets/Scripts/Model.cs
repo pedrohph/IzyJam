@@ -6,6 +6,7 @@ public class Model : MonoBehaviour {
     [Header("Prefabs")]
     public GameObject knife;
     public StageManager stageManager;
+    public GameObject gift;
 
     [Header("Stage info")]
     [SerializeField] Vector3 knifePosition = Vector3.zero;
@@ -56,6 +57,15 @@ public class Model : MonoBehaviour {
     }
 
     private IEnumerator NextStage(float time) {
+        if (currentStage % 5 == 4){
+            Destroy(Instantiate(gift, transform.position, transform.rotation),3);
+            time += 0.75f;
+            int coins = PlayerPrefs.GetInt("AppleCoin", 0);
+
+            coins += Random.Range(90,120);
+
+            PlayerPrefs.SetInt("AppleCoin", coins);
+        }
         currentStage++;
         StartCoroutine(stageManager.ReadStage(currentStage, time));
         yield return new WaitForSeconds(time + 0.2f);

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Stage7
   m_EditorClassIdentifier: 
   target: {fileID: 6228830718986747738, guid: 58b104c9ade663d4a9df9f49a1b1e8c5, type: 3}
-  AmountKnives: 9
+  AmountKnives: 10
   targetType: 0
-  targetVelocity: 190
+  targetVelocity: 285
   decreaseSpeed: 0
   appleAmount: 2
   knivesOnTarget: 0
