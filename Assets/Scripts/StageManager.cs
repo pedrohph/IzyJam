@@ -16,7 +16,7 @@ public class StageManager : MonoBehaviour {
         if (stage != null) {
             knivesAmount = stage.AmountKnives;
 
-            currentTarget = Instantiate(stage.target, new Vector3(0, 2.5f, 0), transform.rotation);
+            currentTarget = Instantiate(stage.target, new Vector3(0, 1.5f, 0), transform.rotation);
 
             if (stage.targetType == Stage.TargetType.Simple) {
                 currentTarget.AddComponent<Target>();
