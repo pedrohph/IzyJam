@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b95e72fb06683545b14f4d2a585cc19, type: 3}
+  m_Name: KnifeSkins
+  m_EditorClassIdentifier: 
+  spriteKnife:
+  - {fileID: -3058252503963504222, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: 8198744495745583392, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: 6899130175684857002, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: -3599512033200449056, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: -5044202095879346154, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: 5478015745745718945, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: -9150767535649938383, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: 1257157272029351849, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: -4898404166247561635, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: 4065667013066987815, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: -503625993261617912, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: 5218444649712355244, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: -3910030241563786630, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: -4222661995135703105, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: 5068567701358554294, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}
+  - {fileID: -5490361046707794046, guid: cf341f94ac3937043af95f1a7ac54000, type: 3}

@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Apple.cs" />
     <Compile Include="Assets\Scripts\Knife.cs" />
+    <Compile Include="Assets\Scripts\KnifeSkin.cs" />
     <Compile Include="Assets\Scripts\Model.cs" />
     <Compile Include="Assets\Scripts\Stage.cs" />
     <Compile Include="Assets\Scripts\StageManager.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\UI\HudGameOver.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\UI\Settings.cs" />
+    <Compile Include="Assets\Scripts\UI\SkinShop.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

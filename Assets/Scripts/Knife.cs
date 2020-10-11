@@ -12,6 +12,8 @@ public class Knife : MonoBehaviour {
     bool hitSomething = false;
     // Start is called before the first frame update
     void Start() {
+        KnifeSkin skins = Resources.Load<KnifeSkin>("KnifeSkins");
+        gameObject.GetComponent<SpriteRenderer>().sprite = skins.spriteKnife[PlayerPrefs.GetInt("CurrentSkin", 0)];
         rBody = gameObject.GetComponent<Rigidbody2D>();
     }
 

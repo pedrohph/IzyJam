@@ -22,6 +22,7 @@ public class Model : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        gameOverPanel.GetComponent<HudGameOver>().ContinuedGame += OnContinuedGame;
         score = 0;
         currentStage = -1;
         NextStage();
@@ -61,6 +62,10 @@ public class Model : MonoBehaviour {
         CreateKnife();
 
         hud.NextStage(currentStage, totalAmountKnives);
+    }
 
+    public void OnContinuedGame() {
+        totalAmountKnives++;
+        CreateKnife();
     }
 }

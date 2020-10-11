@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour {
     public Text appleText;
 
     public GameObject settingsPanel;
+    public GameObject storePanel;
 
     // Start is called before the first frame update
     void Start() {
@@ -25,6 +26,7 @@ public class MainMenu : MonoBehaviour {
         hScoreText.text = "Score: " + hScore;
         appleText.text = "x " + PlayerPrefs.GetInt("AppleCoin", 0);
         settingsPanel.GetComponent<Settings>().ResetedData += OnResetedData;
+        storePanel.GetComponent<SkinShop>().SkinBought += OnSkinBought;
     }
 
     public void PlayButton() {
@@ -38,5 +40,15 @@ public class MainMenu : MonoBehaviour {
     public void OnResetedData() {
         hScoreText.gameObject.SetActive(false);
         hStageText.gameObject.SetActive(false);
+        appleText.text = "x 0";
+    }
+
+    public void OpenStore() {
+        storePanel.SetActive(true);
+    }
+
+    public void OnSkinBought() {
+        int coins = PlayerPrefs.GetInt("AppleCoin", 0);
+        appleText.text = "x " + coins;
     }
 }
