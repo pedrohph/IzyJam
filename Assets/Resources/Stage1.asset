@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d92116863114e64693dd348c3127c12, type: 3}
   m_Name: Stage1
   m_EditorClassIdentifier: 
-  target: {fileID: 5109872847299131744, guid: 4d33c00366297754c90dc7bc429caa66, type: 3}
+  target: {fileID: 957262648752400007, guid: 59dd14c3898fd1b4abcbd28e7b70a0b1, type: 3}
   AmountKnives: 9
   targetType: 0
   targetVelocity: 150
   decreaseSpeed: 0
   appleAmount: 2
+  knivesOnTarget: 1

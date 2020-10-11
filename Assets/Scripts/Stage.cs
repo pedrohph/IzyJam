@@ -22,5 +22,6 @@ public class Stage : ScriptableObject {
     public float decreaseSpeed;
 
     public int appleAmount;
+    public int knivesOnTarget;
 
 }

@@ -12,7 +12,7 @@ public class StageManager : MonoBehaviour {
             Destroy(currentTarget);
         }
 
-        Stage stage = Resources.Load<Stage>("Stage" + currentStage);
+        Stage stage = Resources.Load<Stage>("Stage" + currentStage % 10);
         if (stage != null) {
             knivesAmount = stage.AmountKnives;
 
@@ -28,12 +28,15 @@ public class StageManager : MonoBehaviour {
                 currentTarget.GetComponent<TargetDecelerate>().decreaseSpeed = stage.decreaseSpeed;
             }
 
+            currentTarget.GetComponent<Target>().amountKnives = stage.knivesOnTarget;
             currentTarget.GetComponent<Target>().amountApples = Random.Range(0, stage.appleAmount + 1);
-        
+
             currentTarget.GetComponent<Target>().apple = apple;
+
+            stage.targetVelocity += 15 * currentStage / 10;
             currentTarget.GetComponent<Target>().maxRotateVelocity = stage.targetVelocity;
         } else {
-            //Fim de jogo
+            stage = Resources.Load<Stage>("Stage0");
         }
     }
 }

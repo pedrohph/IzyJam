@@ -18,3 +18,4 @@ MonoBehaviour:
   targetVelocity: 250
   decreaseSpeed: 125
   appleAmount: 3
+  knivesOnTarget: 0

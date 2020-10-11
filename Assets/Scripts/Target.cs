@@ -8,13 +8,22 @@ public class Target : MonoBehaviour {
 
 
     public int amountApples;
+    public int amountKnives;
     public GameObject apple;
+    GameObject knife;
 
     GameObject particle;
 
     // Start is called before the first frame update
     void Start() {
         particle = transform.GetChild(transform.childCount - 1).gameObject;
+
+        knife = transform.GetChild(1).gameObject;
+        knife.SetActive(false);
+        if(amountKnives != 0) {
+            GenerateKnives();
+        }
+
         if (amountApples != 0) {
             GenerateApples();
         }
@@ -51,6 +60,26 @@ public class Target : MonoBehaviour {
             GenerateApples();
         }
     }
+
+    private void GenerateKnives() {
+        int totalApplePositions = transform.GetChild(0).childCount;
+        if (totalApplePositions == 0) {
+            return;
+        }
+        int index = Random.Range(0, totalApplePositions);
+        Transform applePosition = transform.GetChild(0).GetChild(index);
+        GameObject createdKnife = Instantiate(knife, applePosition.position, applePosition.rotation, transform);
+        createdKnife.transform.Rotate(0, 0, 180);
+        createdKnife.SetActive(true);
+
+        applePosition.parent = null;
+        Destroy(applePosition.gameObject);
+        amountKnives--;
+        if (amountKnives > 0) {
+            GenerateKnives();
+        }
+    }
+
 
     public void TargetHit(Vector3 hitPosition) {
         gameObject.GetComponent<Animator>().Play("TargetHit");
