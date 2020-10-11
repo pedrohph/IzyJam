@@ -88,4 +88,22 @@ public class Target : MonoBehaviour {
         Destroy(createdParticle, 1);
     }
 
+    public void Explode() {
+        GameObject targetChild;
+        Rigidbody2D rBodyTarget;
+        for (int i = 0; i < transform.childCount; i++) {
+            targetChild = transform.GetChild(i).gameObject;
+            Destroy(targetChild, 2);
+            rBodyTarget = targetChild.GetComponent<Rigidbody2D>();
+            if (rBodyTarget) {
+                    targetChild.GetComponent<Collider2D>().enabled = false;
+                rBodyTarget.isKinematic = false;
+                rBodyTarget.gravityScale = 2;
+                rBodyTarget.AddRelativeForce(new Vector2(Random.Range(-1,1), -8), ForceMode2D.Impulse);
+            }
+        }
+        transform.DetachChildren();
+        Destroy(gameObject);
+    }
+
 }

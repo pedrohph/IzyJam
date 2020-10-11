@@ -7,10 +7,12 @@ public class StageManager : MonoBehaviour {
     public int knivesAmount { get; private set; }
     public GameObject apple;
 
-    public void ReadStage(int currentStage) {
+    public IEnumerator ReadStage(int currentStage, float waitTime) {
         if (currentTarget != null) {
-            Destroy(currentTarget);
+            currentTarget.GetComponent<Target>().Explode();
         }
+
+        yield return new WaitForSeconds(waitTime);
 
         Stage stage = Resources.Load<Stage>("Stage" + currentStage % 10);
         if (stage != null) {
@@ -38,5 +40,6 @@ public class StageManager : MonoBehaviour {
         } else {
             stage = Resources.Load<Stage>("Stage0");
         }
+
     }
 }

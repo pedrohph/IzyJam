@@ -25,7 +25,7 @@ public class Model : MonoBehaviour {
         gameOverPanel.GetComponent<HudGameOver>().ContinuedGame += OnContinuedGame;
         score = 0;
         currentStage = -1;
-        NextStage();
+        StartCoroutine(NextStage(0));
     }
 
     private void CreateKnife() {
@@ -43,7 +43,7 @@ public class Model : MonoBehaviour {
             if (totalAmountKnives > 0) {
                 CreateKnife();
             } else {
-                NextStage();
+                StartCoroutine(NextStage(1));
             }
         } else {
             Invoke("OpenGameOverPanel", 0.5f);
@@ -55,9 +55,10 @@ public class Model : MonoBehaviour {
         gameOverPanel.SetActive(true);
     }
 
-    private void NextStage() {
+    private IEnumerator NextStage(float time) {
         currentStage++;
-        stageManager.ReadStage(currentStage);
+        StartCoroutine(stageManager.ReadStage(currentStage, time));
+        yield return new WaitForSeconds(time + 0.2f);
         totalAmountKnives = stageManager.knivesAmount;
         CreateKnife();
 

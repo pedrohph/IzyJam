@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 2861314056699460219}
   - component: {fileID: 2861314056699460217}
   - component: {fileID: 2861314056699460218}
+  - component: {fileID: 4270758338342838496}
   m_Layer: 9
   m_Name: Knife (1)
   m_TagString: Untagged
@@ -357,6 +358,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 3.4133334}
   m_EdgeRadius: 0
+--- !u!50 &4270758338342838496
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861314056699460220}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2861314058321231026
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +390,7 @@ GameObject:
   - component: {fileID: 2861314058321231025}
   - component: {fileID: 2861314058321230991}
   - component: {fileID: 2861314058321231024}
+  - component: {fileID: 6444951134535528471}
   m_Layer: 9
   m_Name: Knife (2)
   m_TagString: Untagged
@@ -466,6 +489,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 3.4133334}
   m_EdgeRadius: 0
+--- !u!50 &6444951134535528471
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861314058321231026}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4128070759750985632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,6 +5335,7 @@ GameObject:
   - component: {fileID: 8955032439456380710}
   - component: {fileID: 8955032439456380709}
   - component: {fileID: 8955032439456380715}
+  - component: {fileID: 8871389502264405639}
   m_Layer: 9
   m_Name: Knife
   m_TagString: Untagged
@@ -5389,3 +5434,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 3.4133334}
   m_EdgeRadius: 0
+--- !u!50 &8871389502264405639
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955032439456380713}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
