@@ -6,11 +6,15 @@ public class Target : MonoBehaviour {
     public float maxRotateVelocity;
     protected float currentVelocity;
 
+
     public int amountApples;
     public GameObject apple;
 
+    GameObject particle;
+
     // Start is called before the first frame update
     void Start() {
+        particle = transform.GetChild(transform.childCount - 1).gameObject;
         if (amountApples != 0) {
             GenerateApples();
         }
@@ -31,7 +35,7 @@ public class Target : MonoBehaviour {
         transform.Rotate(0, 0, currentVelocity * Time.deltaTime);
     }
 
-    public void GenerateApples() {
+    private void GenerateApples() {
         int totalApplePositions = transform.GetChild(0).childCount;
         if (totalApplePositions == 0) {
             return;
@@ -46,6 +50,14 @@ public class Target : MonoBehaviour {
         if (amountApples > 0) {
             GenerateApples();
         }
+    }
+
+    public void TargetHit(Vector3 hitPosition) {
+        gameObject.GetComponent<Animator>().Play("TargetHit");
+
+        GameObject createdParticle = Instantiate(particle, hitPosition, gameObject.transform.rotation);
+        createdParticle.GetComponent<ParticleSystem>().Play();
+        Destroy(createdParticle, 1);
     }
 
 }

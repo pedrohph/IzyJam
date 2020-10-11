@@ -30,8 +30,8 @@ public class HudGameOver : MonoBehaviour {
     public void GameOverValues(int stage, int score) {
         int coins = PlayerPrefs.GetInt("AppleCoin", 0);
         stage++;
-        textScore.text = "" + score;
         textStage.text = "STAGE " + stage;
+        textScore.text = "" + score;
         textApple.text = "x " + coins;
 
         if (PlayerPrefs.GetInt("HighScore", -1) < score) {
@@ -41,6 +41,12 @@ public class HudGameOver : MonoBehaviour {
         if (PlayerPrefs.GetInt("HighStage", -1) < stage) {
             PlayerPrefs.SetInt("HighStage", stage);
         }
+
+        if(stage % 5 == 0) {
+            stage = stage / 5;
+            textStage.text = "BOSS: " + stage;
+        }
+
 
         if (usedContinue) {
             buttonContinue.gameObject.SetActive(false);

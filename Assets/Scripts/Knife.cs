@@ -39,6 +39,7 @@ public class Knife : MonoBehaviour {
                 rBody.isKinematic = true;
                 gameObject.transform.parent = collision.transform;
                 transform.Translate(0, 0.75f, 0);
+                collision.gameObject.GetComponent<Target>().TargetHit(collision.contacts[0].point);
             } else {
                 gameObject.GetComponent<Collider2D>().enabled = false;
                 rBody.AddForce(Vector2.one * -1 * speedForce / 2);

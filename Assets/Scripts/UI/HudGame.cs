@@ -10,7 +10,13 @@ public class HudGame : MonoBehaviour {
 
     public void NextStage(int stage, int knivesAmount) {
         stage++;
-        textStage.text = "STAGE" + stage;
+        textStage.text = "STAGE " + stage;
+
+        if (stage % 5 == 0) {
+            stage = stage / 5;
+            textStage.text = "BOSS: " + stage;
+        }
+
         if (knives.Count > knivesAmount) {
             RemoveKnives(knivesAmount);
         } else if (knives.Count < knivesAmount) {

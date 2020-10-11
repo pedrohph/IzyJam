@@ -17,6 +17,7 @@ public class StageManager : MonoBehaviour {
             knivesAmount = stage.AmountKnives;
 
             currentTarget = Instantiate(stage.target, new Vector3(0, 2.5f, 0), transform.rotation);
+
             if (stage.targetType == Stage.TargetType.Simple) {
                 currentTarget.AddComponent<Target>();
             } else if (stage.targetType == Stage.TargetType.Inverse) {
@@ -26,9 +27,9 @@ public class StageManager : MonoBehaviour {
                 currentTarget.AddComponent<TargetDecelerate>();
                 currentTarget.GetComponent<TargetDecelerate>().decreaseSpeed = stage.decreaseSpeed;
             }
+
             currentTarget.GetComponent<Target>().amountApples = Random.Range(0, stage.appleAmount + 1);
-
-
+        
             currentTarget.GetComponent<Target>().apple = apple;
             currentTarget.GetComponent<Target>().maxRotateVelocity = stage.targetVelocity;
         } else {
